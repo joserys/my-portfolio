@@ -20,29 +20,29 @@ const contactInfo = [{
   id: 'location',
   icon: icon({name: 'map-location-dot', style: 'solid'}),
   iconSize: "2xl",
-  title: 'Location',
-  description: 'Mishawaka, Indiana'
+  title: 'Mishawaka, Indiana',
+  description: 'Location'
 },
 {
   id: 'email',
   icon: icon({name: 'envelope', style: 'solid'}),
   iconSize: "2xl",
-  title: 'Email',
-  description: 'jose.rys@outlook.com'
+  title: 'jose.rys@outlook.com',
+  description: 'Email'
 },
 {
   id: 'phoneNumber',
   icon: icon({name: 'phone', style: 'solid'}),
   iconSize: "2xl",
-  title: 'Cell Phone',
-  description: '(574) 992-1089'
+  title: '(574) 992-1089',
+  description: 'Cell Phone'
 },
 {
   id: 'linkedin',
   icon: icon({name: 'linkedin', style: 'brands'}),
   iconSize: "2xl",
-  title: 'linkedin',
-  description: 'link goes here'
+  title: 'Link Goes Here',
+  description: 'linkedin'
 }]
 
 const skillInfo = [{
@@ -145,7 +145,7 @@ const App = () => {
           </ResumeSection>
 
           <ResumeSection title="Experience" withBorder={true}>
-            <resumeCard title="Firefly Integrations LLC" subTitle="Full Stack Software Engineer | Nov 2021-Present | Middlebury, IN">
+            <ResumeCard title="Firefly Integrations LLC" subTitle="Full Stack Software Engineer | Nov 2021-Present | Middlebury, IN">
               <ul>
                 <li>
                   Integrated 6 new RV hardware to Firefly's RV control unit software, insuring all communication between the software and devices is functional and secure
@@ -163,8 +163,32 @@ const App = () => {
                   Insured that the IOS and Android applications functions and looked the same to each other while feeling native to their own OS environment
                 </li>
               </ul>
-              <ResumeList listToGenerate={[{id: 'fireflyAchievement', icon: icon({name: 'award', style: 'solid'}), title: 'Key Achievements'}]}></ResumeList>
-            </resumeCard>
+              <ResumeList listToGenerate={[{id: 'fireflyAchievement', icon: icon({name: 'award', style: 'solid'}), iconSize: "2xl", title: 'Opitmized 7 year old Software increasing the performance', description: 'Key Achievements'}]}></ResumeList>
+            </ResumeCard>
+
+            <ResumeCard title="Firefly Integrations LLC" subTitle="Full Stack Software Engineer | Nov 2021-Present | Middlebury, IN">
+              <ul>
+                <li>
+                  Lead a team of 5 entry level programmers through the designing, documenting, and development of a MariaDB relational database from start to finish.
+                </li>
+                <li>
+                  Lead a 5 person team of PHP, SQL, and Ajax developers to program functional applications and scripts for suite-living.
+                </li>
+                <li>
+                  Ensured that back-end applications were functional by the deadline, by guiding and helping team members as needed.
+                </li>
+                <li>
+                  Programmed a dynamic front-end design using HTML, bootstrap, PHP, and MySQL basing the design generated on which type of user is connected.
+                </li>
+                <li>
+                  Program a maintenance ticket system using PHP and MySQL that allowed residents and staff to request maintenance throughout the facilities.
+                </li>
+                <li>
+                  Designed and developed the admin portal insuring only admin users can access the portal and insuring all functionality was working.
+                </li>
+              </ul>
+              <ResumeList listToGenerate={[{id: 'capstoneAchievement', icon: icon({name: 'award', style: 'solid'}), iconSize: '2xl', title: 'Lead a 5 man team of backend and database developers', description: 'Key Achievements'}]}></ResumeList>
+            </ResumeCard>
           </ResumeSection>
           <ResumeSection title="Projects" withBorder={false}>
             <Text>My Projects Will Go Here</Text>

@@ -21,10 +21,11 @@ const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
   if(typeof subTitle !== 'undefined') {
     renderStyle.sectionSubHeading = {
       fontSize: "2rem",
-      marginBottom: "2rem"
+      marginBottom: "2rem",
+      fontStyle: "italic"
     }
 
-    const sectionedStyled = StyleSheet.create(renderStyle)
+    const sectionedStyled = StyleSheet.create(renderStyle);
 
    return (
       <View style={sectionedStyled.sectionContainer}>

@@ -12,21 +12,13 @@ const ResumeList = ({listToGenerate}) => {
       alignItems:"baseline",
       alignContent: "stretch",
       width:"100%",
-      backgroundColor: "red",
       padding:"0px",
       
     },
     listItem: {
       display: "inline-flex",
       flexGrow: "1",
-      alignItems:"center",
-      justifyContent:"center",
       width:"auto",
-      backgroundColor: "#56da50",
-      paddingLeft: "1rem",
-      paddingRight: "1rem",
-      border: "2px solid #a2eda9",
-      borderRadius: "10px",
     },
     listIcon: {
       display: "inline-block",
@@ -43,8 +35,8 @@ const ResumeList = ({listToGenerate}) => {
     <div style={listStyle.listItem} key={item.id}>
       <FontAwesomeIcon style={listStyle.listIcon} icon={item.icon} size={item.iconSize}/>
       <div style={listStyle.listInfo}>
-        <Text style={{display: "block"}}>{item.title}</Text>
-        <Text style={{display: "block"}}>{item.description}</Text>
+        <Text style={{display: "block", fontWeight: "bold"}}>{item.title}</Text>
+        <Text style={{display: "block", fontStyle: "italic"}}>{item.description}</Text>
       </div>
     </div>
   );
