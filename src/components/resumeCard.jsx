@@ -4,24 +4,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const ResumeCard = ({title, subTitle, children}) => {
   const cardStyle = StyleSheet.create({
     cardContainer: {
-      marginRight: "5rem",
       marginBottom: "2rem",
       padding: "1rem",
       borderLeftStyle: "solid",
-      borderLeftWidth: "5px",
-      borderTopStyle: "solid",
-      borderTopWidth: "5px",
-      borderRadius: "5px",
-      backgroundColor: "#abc56c"
+      borderLeftWidth: "2px",
+      borderRadius: "25px",
+      borderColor: "#FEFFBE"
     },
     cardHeading: {
       fontSize: "2rem",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      color: "#F4F4F9"
     },
     cardSubHeading: {
       fontSize: "1rem",
       fontStyle: "italic",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      color: "#F4F4F9"
     }
   });
 

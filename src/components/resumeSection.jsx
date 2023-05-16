@@ -5,10 +5,12 @@ const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
 
   let renderStyle = {
     sectionContainer: {
-      margin: "1rem",
-      padding: "1rem"
+      marginLeft: "3rem",
+      marginRight: "3rem",
+      padding:"2rem",
     },
     sectionHeading: {
+      color: "#F4F4F9",
       fontSize: "4rem"
     }
   }
@@ -16,13 +18,15 @@ const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
   if(withBorder) {
     renderStyle.sectionContainer.borderStyle = "solid";
     renderStyle.sectionContainer.borderBottomWidth = "2px";
+    renderStyle.sectionContainer.borderColor = "#FEFFBE";
   }
 
   if(typeof subTitle !== 'undefined') {
     renderStyle.sectionSubHeading = {
       fontSize: "2rem",
       marginBottom: "2rem",
-      fontStyle: "italic"
+      fontStyle: "italic",
+      color: "#F4F4F9",
     }
 
     const sectionedStyled = StyleSheet.create(renderStyle);

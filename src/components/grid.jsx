@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 
-const Grid = ({ layout, sizes, scrollable, children }) => {
+const Grid = ({ borderInfo, bgColor, layout, sizes, scrollable, children }) => {
   console.log(layout, sizes, scrollable, children);
 
   let gridStyle = {
@@ -8,6 +8,7 @@ const Grid = ({ layout, sizes, scrollable, children }) => {
         display: "grid",
         maxHeight: "100vh",
         maxWidth: "100vw",
+        borderColor: "#FEFFBE"
       },
     },
     gridStringFormat = "",
@@ -18,6 +19,20 @@ const Grid = ({ layout, sizes, scrollable, children }) => {
 
   if (typeof scrollable !== "undefined") {
     gridStyle.gridContainer.overflowY = scrollable ? "scroll" : "hidden";
+  }
+
+  if (typeof bgColor !== "undefined") {
+    gridStyle.gridContainer.backgroundColor = bgColor;
+  }
+
+  if (typeof borderInfo !== "undefined") {
+    for (const side in borderInfo) {
+      if (Object.hasOwnProperty.call(borderInfo, side)) {
+        const width = borderInfo[side];
+        gridStyle.gridContainer["border" + side + "Style"] = "solid";
+        gridStyle.gridContainer["border" + side + "Width"] = width;
+      }
+    }
   }
 
   if (typeof layout !== "undefined") {
