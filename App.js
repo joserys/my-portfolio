@@ -141,7 +141,13 @@ const App = () => {
           </ResumeSection>
 
           <ResumeSection title="Education" subTitle="Indiana University | 2018 - 2021" withBorder={true}>
-            <Text style={{color: "#F4F4F9"}}>Bachelor of science in Informatics With a minor in Computer Science</Text>
+            <Text style={{color: "#F4F4F9", marginBottom: "2rem"}}>    For my undergrad I went to Indiana University to start a 4 year program as an Informatics major. Knowing that
+            I wanted to follow a fullstack developer career I decided to also minor in Computer Science. With all the college credits I received during my
+            highschool career I manage to finish the 4 year program within 3 years instead graduating a year sooner then my peers. During my time at IU I
+            was enrolled into the deans list 3 semesters in a row. In May 2021 I graduated from IU with a Bachelors of science in Informatics With a minor in Computer Science</Text>
+            <ResumeCard title="Courses Taken" subTitle="Related to Full Stack Development">
+
+            </ResumeCard>
           </ResumeSection>
 
           <ResumeSection title="Work Experience" subTitle="As A Full Stack Developer" withBorder={true}>
@@ -163,7 +169,7 @@ const App = () => {
                   Insured that the IOS and Android applications functions and looked the same to each other while feeling native to their own OS environment
                 </li>
               </ul>
-              <ResumeList listToGenerate={[{id: 'fireflyAchievement', icon: icon({name: 'award', style: 'solid'}), iconSize: "2xl", title: 'Opitmized 7 year old Software increasing the performance', description: 'Key Achievements'}]}></ResumeList>
+              <ResumeList listToGenerate={[{id: 'fireflyAchievement', icon: icon({name: 'award', style: 'solid'}), iconSize: "2xl", title: 'Optimized 7 year old Software increasing the performance', description: 'Key Achievements'}]}></ResumeList>
             </ResumeCard>
 
             <ResumeCard title="Suite-Living Nursing Home" subTitle="Full Stack Web Developers | August 2020 - May 2021 | Marion, IN">
@@ -190,8 +196,8 @@ const App = () => {
               <ResumeList listToGenerate={[{id: 'capstoneAchievement', icon: icon({name: 'award', style: 'solid'}), iconSize: '2xl', title: 'Lead a 5 man team of backend and database developers', description: 'Key Achievements'}]}></ResumeList>
             </ResumeCard>
           </ResumeSection>
-          <ResumeSection title="Projects" withBorder={false}>
-            <Text style={{color: "#F4F4F9"}}>My Projects Will Go Here</Text>
+          <ResumeSection title="Personal Projects" withBorder={false}>
+            My Projects Will Go Here
           </ResumeSection>
         </View>
       </Grid>
