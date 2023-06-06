@@ -1,6 +1,8 @@
 import { StyleSheet, View, Text } from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import './../css/responsive.css';
+
 const ResumeCard = ({title, subTitle, children}) => {
   const cardStyle = StyleSheet.create({
     cardContainer: {
@@ -23,14 +25,13 @@ const ResumeCard = ({title, subTitle, children}) => {
       color: "#F4F4F9"
     }
   });
-
-  console.log(cardStyle);
+  
   return (
-    <View style={cardStyle.cardContainer}>
-      <Text style={cardStyle.cardHeading}>{title}</Text>
-      <Text style={cardStyle.cardSubHeading}>{subTitle}</Text>
+    <div className="cardContainer">
+      <div className="cardHeading">{title}</div>
+      <div className="cardSubHeading">{subTitle}</div>
       {children}
-    </View>
+    </div>
   );
 };
 

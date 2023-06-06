@@ -168,7 +168,7 @@ const App = () => {
                 Insured that the IOS and Android applications functions and looked the same to each other while feeling native to their own OS environment
               </li>
             </ul>
-            <ResumeList listToGenerate={[{id: 'fireflyAchievement', icon: icon({name: 'award', style: 'solid'}), iconSize: "xl", title: 'Optimized 7 year old Software increasing the performance', description: 'Key Achievements'}]}></ResumeList>
+            
           </ResumeCard>
 
           <ResumeCard title="Suite-Living Nursing Home" subTitle="Full Stack Web Developers | August 2020 - May 2021 | Marion, IN">
@@ -192,7 +192,7 @@ const App = () => {
                 Designed and developed the admin portal insuring only admin users can access the portal and insuring all functionality was working.
               </li>
             </ul>
-            <ResumeList listToGenerate={[{id: 'capstoneAchievement', icon: icon({name: 'award', style: 'solid'}), iconSize: 'xl', title: 'Lead a 5 man team of backend and database developers', description: 'Key Achievements'}]}></ResumeList>
+            
           </ResumeCard>
         </ResumeSection>
         <ResumeSection title="Personal Projects" withBorder={false}>

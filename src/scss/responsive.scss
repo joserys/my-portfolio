@@ -7,9 +7,9 @@ $screen-lg-min: 992px;
 $screen-lg-max: 1289px;
 $screen-xlg-min: 1288px;
 
-$primaryColor: #424242;
-$secondaryColor: #7C9885;
-$tertiaryColor: #FEFFBE;
+$primaryColor: #C84630;
+$secondaryColor: #424242;
+$tertiaryColor: #FFA400;
 $fontColor: #F4F4F9;
 
 @mixin containerConstraints() {
@@ -43,7 +43,7 @@ $fontColor: #F4F4F9;
     .sideNavContainer {
       padding: 1rem;
       background-color: $secondaryColor;
-      border-right: $tertiaryColor 2px solid;
+      border-right: $tertiaryColor 3px solid;
     }
 
     .sideNavContainer {
@@ -63,8 +63,8 @@ $fontColor: #F4F4F9;
       .navMenu {
         margin: 1rem;
         padding-top: 1rem;
-        border-top: $tertiaryColor 2px solid;
-        border-bottom: $tertiaryColor 2px solid;
+        border-top: $tertiaryColor 3px solid;
+        border-bottom: $tertiaryColor 3px solid;
         text-align: center;
       }
 
@@ -74,7 +74,7 @@ $fontColor: #F4F4F9;
           margin-bottom: 1rem;
           display: inline-block;
           width: calc(100% - 1rem);
-          border-left: $tertiaryColor 2px solid;
+          border-left: $tertiaryColor 3px solid;
         }
   
         .buttonIcon {
@@ -96,7 +96,7 @@ $fontColor: #F4F4F9;
     }
 
     .sectionBorder {
-      border-bottom: $tertiaryColor 2px solid;
+      border-bottom: $tertiaryColor 3px solid;
     }
 
     .sectionContainer {
@@ -122,32 +122,53 @@ $fontColor: #F4F4F9;
       row-gap: 10px;
     }
 
-    .listItem {
-      padding: .5rem;
-      border-left: $tertiaryColor 3px solid;
-      border-bottom: $tertiaryColor 3px solid;
-      border-radius: 5px;
-      background-color: $secondaryColor;
-    }
-
-    .listItem {
-      .listIcon {
-        float: left;
+    .listContainer {
+      .listItem {
+        padding: .5rem;
+        border-left: $tertiaryColor 3px solid;
+        background-color: $secondaryColor;
       }
-      
-      .listInfo {
-        float: right;
-      }
-
-      .listInfo {
-        .listTitle {
-          font-weight: bold;
+  
+      .listItem {
+        .listIcon {
+          float: left;
         }
         
-        .listDescription {
-          font-style: italic;
-          line-height: 1;
+        .listInfo {
+          float: right;
         }
+  
+        .listInfo {
+          .listTitle {
+            font-weight: bold;
+          }
+          
+          .listDescription {
+            font-style: italic;
+            line-height: 1;
+          }
+        }
+      }
+    }
+
+    .cardContainer {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: $secondaryColor;
+      border: $tertiaryColor 3px solid;
+      border-radius: 15px;
+    }
+
+    .cardContainer {
+      .cardHeading {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+  
+      .cardSubHeading {
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: bold;
       }
     }
   }
