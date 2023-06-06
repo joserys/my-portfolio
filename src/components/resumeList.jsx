@@ -2,6 +2,8 @@ import { StyleSheet, View, Text } from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { inline } from "react-native-web/dist/cjs/exports/StyleSheet/compiler";
 
+import './../css/responsive.css'
+
 const ResumeList = ({listToGenerate}) => {
 
   const listStyle = StyleSheet.create({
@@ -31,17 +33,17 @@ const ResumeList = ({listToGenerate}) => {
   });
 
   const list = listToGenerate.map(item => 
-    <div style={listStyle.listItem} key={item.id}>
-      <FontAwesomeIcon style={listStyle.listIcon} icon={item.icon} size={item.iconSize}/>
-      <div style={listStyle.listInfo}>
-        <Text style={{display: "block", fontWeight: "bold", color: "#F4F4F9",}}>{item.title}</Text>
-        <Text style={{display: "block", fontStyle: "italic",lineHeight: "1", color: "#F4F4F9",}}>{item.description}</Text>
+    <div className="listItem" key={item.id}>
+      <FontAwesomeIcon className="listIcon" icon={item.icon} size={item.iconSize}/>
+      <div className="listInfo">
+        <div className="listTitle">{item.title}</div>
+        <div className="listDescription">{item.description}</div>
       </div>
     </div>
   );
 
   return (
-    <div>
+    <div className="listContainer">
       {list}
     </div>
   );

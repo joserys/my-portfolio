@@ -2,6 +2,8 @@ import { StyleSheet, View, Text, Image } from "react-native";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import './../css/responsive.css'
+
 const NavMenu = ({ menuToGenerate }) => {
   const menuStyle = StyleSheet.create({
     navMenu: {
@@ -38,15 +40,13 @@ const NavMenu = ({ menuToGenerate }) => {
   });
 
   const menu = menuToGenerate.map((item) => (
-    <div style={menuStyle.navButton} key={item.id}>
-      <FontAwesomeIcon style={menuStyle.buttonIcon} icon={item.icon} size={item.iconSize}/>
-      <Text style={menuStyle.buttonLabel}>
-        {item.title}
-      </Text>
+    <div className="navButton" key={item.id}>
+      <FontAwesomeIcon className="buttonIcon" icon={item.icon} size={item.iconSize}/>
+      <div className="buttonLabel">{item.title}</div>
     </div>
   ));
 
-  return <nav style={menuStyle.navMenu}>{menu}</nav>;
+  return <nav className="navMenu">{menu}</nav>;
 };
 
 export default NavMenu;

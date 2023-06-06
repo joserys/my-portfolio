@@ -1,6 +1,8 @@
 import { StyleSheet, View, Text } from "react-native";
 import Grid from './grid.jsx';
 
+import './../css/responsive.css';
+
 const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
 
   let renderStyle = {
@@ -12,6 +14,9 @@ const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
     sectionHeading: {
       color: "#F4F4F9",
       fontSize: "4rem"
+    },
+    sectionContainer: {
+      borderStyle: "none"
     }
   }
 
@@ -32,11 +37,11 @@ const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
     const sectionedStyled = StyleSheet.create(renderStyle);
 
    return (
-      <View style={sectionedStyled.sectionContainer}>
-        <Text style={sectionedStyled.sectionHeading}>{title}</Text>
-        <Text style={sectionedStyled.sectionSubHeading}>{subTitle}</Text>
+      <div className={withBorder ? "sectionContainer sectionBorder" : "sectionContainer"}>
+        <div className="sectionHeading">{title}</div>
+        <div className="sectionSubHeading headingMargin">{subTitle}</div>
         {children}
-      </View>
+      </div>
     );
   } else {
     renderStyle.sectionHeading.marginBottom = "2rem"
@@ -44,10 +49,10 @@ const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
     const sectionedStyled = StyleSheet.create(renderStyle)
 
     return (
-      <View style={sectionedStyled.sectionContainer}>
-        <Text style={sectionedStyled.sectionHeading}>{title}</Text>
+      <div className={withBorder ? "sectionContainer sectionBorder" : "sectionContainer"}>
+        <div className="sectionHeading headingMargin">{title}</div>
         {children}
-      </View>
+      </div>
     );
   }
 };
