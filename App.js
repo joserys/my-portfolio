@@ -1,5 +1,6 @@
 import { StyleSheet, View, div } from 'react-native';
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './src/css/responsive.css'
 
@@ -72,16 +73,10 @@ const skillInfo = [{
   title: 'Bootstrap'
 },
 {
-  id: 'Javascript',
+  id: 'Javascript/jQuery',
   icon: icon({name: 'square-js', style: 'brands'}),
   iconSize: "xl",
   title: 'Javascript'
-},
-{
-  id: 'jQuery',
-  icon: icon({name: 'linkedin', style: 'brands'}),
-  iconSize: "xl",
-  title: 'jQuery'
 },
 {
   id: 'React.js',
@@ -131,17 +126,17 @@ const App = () => {
   return (
     <main className="mainContainer">
       <SideNav/>
-      <div style={{overflowY: "scroll"}}>
-        <ResumeSection title="Jose Lopez-Reyes" subTitle="Full Stack Software Engineer" withBorder={true}>
+      <div className="smoothScrolling">
+        <ResumeSection id="aboutMe" title="Jose Lopez-Reyes" subTitle="Full Stack Software Engineer" withBorder={true}>
           <ResumeList listToGenerate={contactInfo}></ResumeList>
           <div>To Continue growing my software engineering career, while apply my technical and analytical skills to develop efficient and effective software solutions.</div>
         </ResumeSection>
 
-        <ResumeSection title="Skills" withBorder={true}>
+        <ResumeSection id="skills" title="Skills" withBorder={true}>
           <ResumeList listToGenerate={skillInfo}></ResumeList>
         </ResumeSection>
 
-        <ResumeSection title="Education" subTitle="Indiana University | 2018 - 2021" withBorder={true}>
+        <ResumeSection id ="education" title="Education" subTitle="Indiana University | 2018 - 2021" withBorder={true}>
           <div style={{marginBottom: "2rem"}}>    For my undergrad I went to Indiana University to start a 4 year program as an Informatics major. Knowing that
           I wanted to follow a fullstack developer career I decided to also minor in Computer Science. With all the college credits I received during my
           highschool career I manage to finish the 4 year program within 3 years instead graduating a year sooner then my peers. During my time at IU I
@@ -149,7 +144,7 @@ const App = () => {
           <ResumeCard title="Courses Taken" subTitle="Related to Full Stack Development"></ResumeCard>
         </ResumeSection>
 
-        <ResumeSection title="Work Experience" subTitle="As A Full Stack Developer" withBorder={true}>
+        <ResumeSection id="experience" title="Work Experience" subTitle="As A Full Stack Developer" withBorder={true}>
           <ResumeCard title="Firefly Integrations LLC" subTitle="Full Stack Software Engineer | Nov 2021 - Present | Middlebury, IN">
             <ul>
               <li>
@@ -168,7 +163,15 @@ const App = () => {
                 Insured that the IOS and Android applications functions and looked the same to each other while feeling native to their own OS environment
               </li>
             </ul>
-            
+            <div>
+              <div>
+                <FontAwesomeIcon className="listIcon" icon={icon({name: 'award', style: 'solid'})} size={"xl"}/>
+                <div>Key Achievement: Optimized 7-year-old Software</div>
+              </div>
+              <div>
+                Optimized firefly's 7-year-old linux-based rv control unit software. reducing the CPU usage from 15% to 2% while the software is idle, While with heavy processing the CPU usage went from 27% to 15%. During this process I had to make sure that the software functioned and looked the same as it has always been.
+              </div>
+            </div>
           </ResumeCard>
 
           <ResumeCard title="Suite-Living Nursing Home" subTitle="Full Stack Web Developers | August 2020 - May 2021 | Marion, IN">
@@ -192,10 +195,18 @@ const App = () => {
                 Designed and developed the admin portal insuring only admin users can access the portal and insuring all functionality was working.
               </li>
             </ul>
-            
+            <div>
+              <div style={{display: "inline-block", width:"100%"}}>
+                <FontAwesomeIcon style={{float: "left"}} className="listIcon" icon={icon({name: 'award', style: 'solid'})} size={"xl"}/>
+                <div style={{float: "left"}}>Key Achievement: Fully Developed a Relational Database From Start to Finish</div>
+              </div>
+              <div>
+                Optimized firefly's 7-year-old linux-based rv control unit software. reducing the CPU usage from 15% to 2% while the software is idle, While with heavy processing the CPU usage went from 27% to 15%. During this process I had to make sure that the software functioned and looked the same as it has always been.
+              </div>
+            </div>
           </ResumeCard>
         </ResumeSection>
-        <ResumeSection title="Personal Projects" withBorder={false}>
+        <ResumeSection id="projects" title="Personal Projects" withBorder={false}>
           My Projects Will Go Here
         </ResumeSection>
       </div>

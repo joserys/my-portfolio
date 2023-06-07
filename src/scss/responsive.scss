@@ -7,10 +7,31 @@ $screen-lg-min: 992px;
 $screen-lg-max: 1289px;
 $screen-xlg-min: 1288px;
 
-$primaryColor: #C84630;
-$secondaryColor: #424242;
-$tertiaryColor: #FFA400;
-$fontColor: #F4F4F9;
+// $primaryColor: #C84630;
+// $secondaryColor: #424242;
+// $tertiaryColor: #FFA400;
+// $fontColor: #F4F4F9;
+
+// $primaryColor: #1d3557;
+// $secondaryColor: #457b9d;
+// $tertiaryColor: #a8dadc;
+// $fontColor: #f1faee;
+
+// $primaryColor: #003049;
+// $secondaryColor: #f77f00;
+// $tertiaryColor: #fcbf49;
+// $fontColor: #eae2b7;
+
+//like this one a lot
+// $primaryColor: #22223b;
+// $secondaryColor: #4a4e69;
+// $tertiaryColor: #9a8c98;
+// $fontColor: #f2e9e4;
+
+$primaryColor: #22223b;
+$secondaryColor: #4a4e69;
+$tertiaryColor: #9a8c98;
+$fontColor: #f2e9e4;
 
 @mixin containerConstraints() {
   height: 100%;
@@ -19,7 +40,20 @@ $fontColor: #F4F4F9;
   max-width: 100vw;
 }
 
+.smoothScrolling {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.navButton:hover {
+  color: $fontColor
+}
+
+.navButton:active {
+
+}
 .mainContainer {
+  margin: 0;
   @include containerConstraints;
   background-color: $primaryColor;
   color: $fontColor;
@@ -74,9 +108,41 @@ $fontColor: #F4F4F9;
           margin-bottom: 1rem;
           display: inline-block;
           width: calc(100% - 1rem);
+          color: $fontColor;
+          transition: border ease, border-color 0.5s ease;
+        }
+
+        .navButton:after {
           border-left: $tertiaryColor 3px solid;
         }
-  
+        
+        .navButton:hover {
+          border-left: $tertiaryColor 3px solid;
+        }
+        
+        .navButton.active {
+          border-left: $tertiaryColor 3px solid;
+        }
+
+        .nav-item:after {
+          content: "";
+          display: block;
+          height: 3px;
+          width: 0;
+          background: transparent;
+          transition: width 0.7s ease, background-color 0.5s ease;
+        }
+        
+        .nav-item:hover:after {
+          width: 100%;
+          background: #ffdd40;
+        }
+        
+        .nav-item.active {
+          color: #ffdd40;
+          border: 1px solid #ffdd40;
+        }
+
         .buttonIcon {
           float: left;
           margin-right: 1rem;
@@ -120,6 +186,7 @@ $fontColor: #F4F4F9;
       grid-template-columns: 25% 25% 25% 25%;
       column-gap: 10px;
       row-gap: 10px;
+      margin-bottom: 2rem;
     }
 
     .listContainer {
@@ -170,6 +237,10 @@ $fontColor: #F4F4F9;
         font-style: italic;
         font-weight: bold;
       }
+    }
+
+    .keyAchievement {
+      
     }
   }
 }

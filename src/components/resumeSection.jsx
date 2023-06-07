@@ -3,7 +3,7 @@ import Grid from './grid.jsx';
 
 import './../css/responsive.css';
 
-const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
+const ResumeSection = ({id, title, subTitle, children, withBorder = false}) => {
 
   let renderStyle = {
     sectionContainer: {
@@ -37,7 +37,7 @@ const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
     const sectionedStyled = StyleSheet.create(renderStyle);
 
    return (
-      <div className={withBorder ? "sectionContainer sectionBorder" : "sectionContainer"}>
+      <div id={id} className={withBorder ? "sectionContainer sectionBorder" : "sectionContainer"}>
         <div className="sectionHeading">{title}</div>
         <div className="sectionSubHeading headingMargin">{subTitle}</div>
         {children}
@@ -49,7 +49,7 @@ const ResumeSection = ({title, subTitle, children, withBorder = false}) => {
     const sectionedStyled = StyleSheet.create(renderStyle)
 
     return (
-      <div className={withBorder ? "sectionContainer sectionBorder" : "sectionContainer"}>
+      <div id={id} className={withBorder ? "sectionContainer sectionBorder" : "sectionContainer"}>
         <div className="sectionHeading headingMargin">{title}</div>
         {children}
       </div>

@@ -2,9 +2,13 @@ import { StyleSheet, View, Text, Image } from "react-native";
 import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import './../css/responsive.css'
+import './../css/responsive.css';
 
 const NavMenu = ({ menuToGenerate }) => {
+  const handleClick = () => {
+    console.log();
+  }
+
   const menuStyle = StyleSheet.create({
     navMenu: {
       margin: "1rem",
@@ -40,10 +44,10 @@ const NavMenu = ({ menuToGenerate }) => {
   });
 
   const menu = menuToGenerate.map((item) => (
-    <div className="navButton" key={item.id}>
+    <a className={item.id === 'aboutMe' ? "navButton active" : "navButton"} href={"#" + item.id} key={item.id} onClick={handleClick}>
       <FontAwesomeIcon className="buttonIcon" icon={item.icon} size={item.iconSize}/>
       <div className="buttonLabel">{item.title}</div>
-    </div>
+    </a>
   ));
 
   return <nav className="navMenu">{menu}</nav>;
