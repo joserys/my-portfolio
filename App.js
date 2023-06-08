@@ -9,6 +9,7 @@ import SideNav from './src/components/sideNav.jsx';
 import ResumeSection from './src/components/resumeSection.jsx';
 import ResumeCard from './src/components/resumeCard.jsx';
 import ResumeList from './src/components/resumeList.jsx';
+import KeyAchievement from './src/components/keyAchievement.jsx';
 
 
 const style = StyleSheet.create({
@@ -112,7 +113,7 @@ const skillInfo = [{
   id: 'Amazon Web Services',
   icon: icon({name: 'aws', style: 'brands'}),
   iconSize: "xl",
-  title: 'Amazon Web Services'
+  title: 'Web Services'
 },
 {
   id: 'Java',
@@ -128,12 +129,12 @@ const App = () => {
       <SideNav/>
       <div className="smoothScrolling">
         <ResumeSection id="aboutMe" title="Jose Lopez-Reyes" subTitle="Full Stack Software Engineer" withBorder={true}>
-          <ResumeList listToGenerate={contactInfo}></ResumeList>
+          <ResumeList listToGenerate={contactInfo} columnNum={4}></ResumeList>
           <div>To Continue growing my software engineering career, while apply my technical and analytical skills to develop efficient and effective software solutions.</div>
         </ResumeSection>
 
         <ResumeSection id="skills" title="Skills" withBorder={true}>
-          <ResumeList listToGenerate={skillInfo}></ResumeList>
+          <ResumeList listToGenerate={skillInfo} columnNum={5}></ResumeList>
         </ResumeSection>
 
         <ResumeSection id ="education" title="Education" subTitle="Indiana University | 2018 - 2021" withBorder={true}>
@@ -163,15 +164,9 @@ const App = () => {
                 Insured that the IOS and Android applications functions and looked the same to each other while feeling native to their own OS environment
               </li>
             </ul>
-            <div>
-              <div>
-                <FontAwesomeIcon className="listIcon" icon={icon({name: 'award', style: 'solid'})} size={"xl"}/>
-                <div>Key Achievement: Optimized 7-year-old Software</div>
-              </div>
-              <div>
-                Optimized firefly's 7-year-old linux-based rv control unit software. reducing the CPU usage from 15% to 2% while the software is idle, While with heavy processing the CPU usage went from 27% to 15%. During this process I had to make sure that the software functioned and looked the same as it has always been.
-              </div>
-            </div>
+            <KeyAchievement title="Optimized 7-year-old Software" >
+              Optimized firefly's 7-year-old linux-based rv control unit software. reducing the CPU usage from 15% to 2% while the software is idle, While with heavy processing the CPU usage went from 27% to 15%. During this process I had to make sure that the software functioned and looked the same as it has always been.
+            </KeyAchievement>
           </ResumeCard>
 
           <ResumeCard title="Suite-Living Nursing Home" subTitle="Full Stack Web Developers | August 2020 - May 2021 | Marion, IN">

@@ -4,32 +4,11 @@ import { inline } from "react-native-web/dist/cjs/exports/StyleSheet/compiler";
 
 import './../css/responsive.css'
 
-const ResumeList = ({listToGenerate}) => {
+const ResumeList = ({listToGenerate, columnNum = 4}) => {
 
-  const listStyle = StyleSheet.create({
-    listItem: {
-      padding: ".5rem",
-      marginBottom: "1rem",
-      marginRight: "1rem",
-      display: "inline-block",
-      width: "calc(20% - 3rem)",
-      borderLeftStyle: "solid",
-      borderLeftWidth: "3px",
-      borderBottomStyle: "solid",
-      borderBottomWidth: "3px",
-      borderRadius: "5px",
-      borderColor: "#FEFFBE",
-      backgroundColor: "#7C9885"
-    },
-    listIcon: {
-      float: "left",
-      display: "inline-block",
-      marginRight: "1rem"
-    },
-    listInfo: {
-      display: "inline-block",
-      float: "left",
-    }
+  const columnsToGenerate = StyleSheet.create({
+    columns: {
+      gridTemplateColumns: `repeat(${columnNum}, ${100/columnNum}%)`    },
   });
 
   const list = listToGenerate.map(item => 
@@ -43,7 +22,7 @@ const ResumeList = ({listToGenerate}) => {
   );
 
   return (
-    <div className="listContainer">
+    <div className="listContainer" style={columnsToGenerate.columns}>
       {list}
     </div>
   );
